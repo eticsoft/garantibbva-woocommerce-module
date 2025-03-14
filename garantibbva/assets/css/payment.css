@@ -1,0 +1,18 @@
+.wc_payment_method.payment_method_garantibbva img {
+    width: 120px; 
+    height: auto;
+}
+
+.woocommerce-checkout-payment#payment {
+    background-color: #f5f5f5; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.woocommerce-checkout-payment#payment div.payment_box {
+    background-color: #ffffff; 
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 15px;
+}

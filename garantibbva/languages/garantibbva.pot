@@ -1,0 +1,192 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GarantiBBVA Payment Gateway\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-26 12:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: garantibbva.php:11
+msgid "GarantiBBVA Payment Gateway"
+msgstr ""
+
+#: garantibbva.php:13
+msgid "GarantiBBVA payment gateway for WooCommerce"
+msgstr ""
+
+#: garantibbva.php:89
+msgid "GarantiBBVA Payment Gateway is not fully compatible with block themes. Some features may not work correctly. Please consider switching to a classic theme for the best experience."
+msgstr ""
+
+#: garantibbva.php:104
+msgid "GarantiBBVA Payment Gateway requires PHP version %s or higher. You are running version %s. Please upgrade PHP and try again."
+msgstr ""
+
+#: garantibbva.php:107 garantibbva.php:121 garantibbva.php:131 garantibbva.php:141
+msgid "Plugin Activation Error"
+msgstr ""
+
+#: garantibbva.php:117
+msgid "GarantiBBVA Payment Gateway requires WordPress version %s or higher. You are running version %s. Please upgrade WordPress and try again."
+msgstr ""
+
+#: garantibbva.php:130
+msgid "GarantiBBVA Payment Gateway requires WooCommerce to be installed and activated."
+msgstr ""
+
+#: garantibbva.php:140
+msgid "GarantiBBVA Payment Gateway is not compatible with block themes. Please use a classic theme."
+msgstr ""
+
+#: garantibbva.php:194
+msgid "GarantiBBVA Payment Gateway for WooCommerce plugin"
+msgstr ""
+
+#: garantibbva.php:200
+msgid "Pay via Card (GarantiBBVA)"
+msgstr ""
+
+#: garantibbva.php:201
+msgid "Payment by your credit/debit card."
+msgstr ""
+
+#: garantibbva.php:224
+msgid "Installment Options"
+msgstr ""
+
+#: garantibbva.php:260
+msgid "Enable/Disable"
+msgstr ""
+
+#: garantibbva.php:262 garantibbva.php:264
+msgid "Enable/Disable GarantiBBVA payment gateway"
+msgstr ""
+
+#: garantibbva.php:300
+msgid "Click to Access GarantiBBVA Panel"
+msgstr ""
+
+#: garantibbva.php:335
+msgid "Error Code"
+msgstr ""
+
+#: garantibbva.php:389
+msgid "Invalid payment ID."
+msgstr ""
+
+#: garantibbva.php:394
+msgid "Invalid order."
+msgstr ""
+
+#: garantibbva.php:411
+msgid "Payment failed"
+msgstr ""
+
+#: garantibbva.php:417
+msgid "Processing GarantiBBVA payment"
+msgstr ""
+
+#: garantibbva.php:420
+msgid "Payment completed successfully via %s."
+msgstr ""
+
+#: garantibbva.php:429
+msgid "Commission Fee"
+msgstr ""
+
+#: garantibbva.php:455
+msgid "GarantiBBVA Payment Warning"
+msgstr ""
+
+#: garantibbva.php:456
+msgid "Payment was processed through GarantiBBVA"
+msgstr ""
+
+#: garantibbva.php:457
+msgid "Please check the payment status and verify with your bank/payment institution."
+msgstr ""
+
+#: templates/checkout/payment-iframe.php:25
+msgid "Loading payment page..."
+msgstr ""
+
+#: templates/installment_theme/classic.php:51
+msgid "Installment"
+msgstr ""
+
+#: templates/installment_theme/classic.php:52
+msgid "Monthly Payment"
+msgstr ""
+
+#: templates/installment_theme/classic.php:53
+msgid "Total"
+msgstr ""
+
+#: templates/installment_theme/classic.php:81
+#: templates/installment_theme/modern.php:112
+msgid "Cash"
+msgstr ""
+
+#: templates/installment_theme/classic.php:84
+#: templates/installment_theme/modern.php:115
+msgid "%d. Installment"
+msgstr ""
+
+#: templates/installment_theme/classic.php:99
+#: templates/installment_theme/modern.php:131
+msgid "* Installment amounts are estimated and may vary according to your bank's campaigns and interest rates."
+msgstr ""
+
+#: templates/installment_theme/modern.php:82
+msgid "Installment"
+msgstr ""
+
+#: templates/installment_theme/modern.php:83
+msgid "Amount"
+msgstr ""
+
+#: templates/installment_theme/modern.php:84
+msgid "Total"
+msgstr ""
+
+#: admin/class-admin.php:63 admin/class-admin.php:70
+msgid "Yes"
+msgstr ""
+
+#: admin/class-admin.php:64 admin/class-admin.php:71
+msgid "No"
+msgstr ""
+
+#: admin/class-admin.php:77
+msgid "Classic"
+msgstr ""
+
+#: admin/class-admin.php:78
+msgid "Modern"
+msgstr ""
+
+#: admin/class-admin.php:130
+msgid "GarantiBBVA Settings"
+msgstr ""
+
+#: admin/class-admin.php:131
+msgid "GarantiBBVA"
+msgstr ""
+
+#: vendor/Eticsoft/Sanalpospro/InternalApi.php:417
+msgid "Payment completed successfully. Process ID: %s"
+msgstr ""
+
+#: vendor/Eticsoft/Sanalpospro/InternalApi.php:441
+msgid "Payment validation failed"
+msgstr ""
+
+#: vendor/Eticsoft/Sanalpospro/InternalApi.php:461
+msgid "Payment error"
+msgstr "" 

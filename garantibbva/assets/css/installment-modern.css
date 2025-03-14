@@ -1,0 +1,303 @@
+/**
+ * garantibbva Modern Installment Theme Styles
+ */
+
+ :root {
+    /* Color Variables */
+    --gbbva-primary: #4a6cf7;
+    --gbbva-primary-light: rgba(74, 108, 247, 0.25);
+    --gbbva-border-light: #eaedf3;
+    --gbbva-border-medium: #dce0e8;
+    --gbbva-border-dark: #adb5bd;
+    --gbbva-bg-light: #f7f9fc;
+    --gbbva-bg-white: #ffffff;
+    --gbbva-text-dark: #3a3f51;
+    --gbbva-text-medium: #5a6171;
+    --gbbva-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --gbbva-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --gbbva-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --gbbva-danger-bg: #fff2f2;
+    --gbbva-danger-border: #fed7d7;
+    --gbbva-danger-text: #e53e3e;
+}
+
+/* Main Container */
+.gbbva-installment-container {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 900px;
+    padding: 20px;
+    background-color: var(--gbbva-bg-white);
+    border-radius: 12px;
+    box-shadow: var(--gbbva-shadow-lg);
+    font-size: 14px;
+}
+
+/* Tabs Navigation */
+.gbbva-installment-tabs {
+    margin-bottom: 15px;
+}
+
+.gbbva-tab-header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 6px;
+}
+
+.gbbva-tab-item {
+    padding: 8px 12px;
+    text-align: center;
+    background-color: var(--gbbva-bg-white);
+    border: 1px solid var(--gbbva-border-medium);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 13px;
+}
+
+.gbbva-tab-item:hover {
+    border-color: var(--gbbva-border-dark);
+    transform: translateY(-2px);
+}
+
+.gbbva-tab-item.active {
+    border-color: var(--gbbva-primary);
+    box-shadow: 0 0 0 2px var(--gbbva-primary-light);
+}
+
+/* Tab Content */
+.gbbva-tab-content {
+    background-color: var(--gbbva-bg-white);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gbbva-tab-pane {
+    display: none;
+    padding: 15px;
+    flex: 1 1 calc(50% - 20px);
+    min-width: 300px;
+    max-width: 480px;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    box-shadow: var(--gbbva-shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gbbva-tab-pane:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--gbbva-shadow-md);
+}
+
+.gbbva-tab-pane.active {
+    display: block;
+}
+
+/* Installment Table */
+.gbbva-installment-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    table-layout: fixed;
+}
+
+.gbbva-installment-table th,
+.gbbva-installment-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--gbbva-border-light);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gbbva-installment-table th {
+    background-color: var(--gbbva-bg-light);
+    font-weight: 600;
+    color: var(--gbbva-text-dark);
+}
+
+.gbbva-installment-table th:first-child,
+.gbbva-installment-table th:nth-child(2),
+.gbbva-installment-table th:nth-child(3) {
+    width: 33.333%;
+    text-align: center;
+    white-space: normal;
+    padding: 10px;
+}
+
+.gbbva-installment-table td:first-child {
+    text-align: center;
+}
+
+.gbbva-installment-table td:nth-child(2),
+.gbbva-installment-table td:nth-child(3) {
+    text-align: center;
+    font-family: inherit;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.gbbva-installment-table tr:last-child td {
+    border-bottom: none;
+}
+
+.gbbva-installment-table tr:hover td {
+    background-color: var(--gbbva-bg-light);
+}
+
+.gbbva-installment-note {
+    margin-top: 15px;
+    font-size: 13px;
+    color: var(--gbbva-text-medium);
+    background: var(--gbbva-bg-light);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--gbbva-border-light);
+    line-height: 1.5;
+}
+
+/* Logo Wrapper */
+.garantibbva-logo-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+.garantibbva-logo-wrapper div {
+    flex: 0 0 calc(25% - 15px);
+    min-width: 120px;
+    border: 1px solid var(--gbbva-border-light);
+    border-radius: 8px;
+    padding: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.garantibbva-logo-wrapper div img {
+    max-height: 40px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.garantibbva-logo-wrapper div:hover {
+    border-color: var(--gbbva-primary);
+    box-shadow: var(--gbbva-shadow-md);
+    transform: translateY(-3px);
+}
+
+/* Card Wrappers */
+.garantibbva-installment-card-wrapper-active {
+    display: block;
+}
+
+.garantibbva-installment-card-wrapper-inactive {
+    display: none;
+}
+
+.garantibbva-card-family-wrapper-active {
+    border: 1px solid var(--gbbva-primary);
+    background-color: var(--gbbva-bg-light);
+    box-shadow: var(--gbbva-shadow-md);
+}
+
+.garantibbva-card-family-wrapper-inactive {
+    border: 1px solid var(--gbbva-border-light);
+}
+
+/* Alert Messages */
+.garantibbva-installment-message-alert {
+    background-color: var(--gbbva-danger-bg);
+    color: var(--gbbva-danger-text);
+    font-weight: 600;
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--gbbva-danger-border);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .gbbva-tab-pane {
+        flex: 1 1 calc(50% - 20px);
+    }
+    
+    .garantibbva-logo-wrapper div {
+        flex: 0 0 calc(25% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .gbbva-tab-header {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gbbva-installment-container {
+        padding: 15px;
+        font-size: 14px;
+        max-width: 100%;
+    }
+    
+    .gbbva-tab-item {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .gbbva-tab-pane {
+        flex: 1 1 100%;
+        min-width: 100%;
+        padding: 12px;
+    }
+    
+    .gbbva-installment-table th,
+    .gbbva-installment-table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+    
+    .garantibbva-logo-wrapper {
+        gap: 10px;
+    }
+    
+    .garantibbva-logo-wrapper div {
+        flex: 0 0 calc(33.333% - 10px);
+        min-width: 100px;
+        height: 45px;
+        padding: 8px;
+    }
+    
+    .garantibbva-logo-wrapper div img {
+        max-height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .garantibbva-logo-wrapper div {
+        flex: 0 0 calc(50% - 10px);
+        min-width: 120px;
+    }
+
+    .gbbva-tab-header {
+        grid-template-columns: 1fr;
+    }
+}
