@@ -34,16 +34,6 @@ Eğer yönetici paneli üzerinden yükleme başarısız olursa, modülü manuel 
 
 ## AYARLARIN YAPILANDIRILMASI
 
-
-6. **Hesabınız yok mu? Kayıt olun** butonuna tıklayarak, ücretsiz bir şekilde hesap oluşturabilirsiniz. Oluşturduğunuz hesap ile panele erişim sağlayabilirsiniz.
-7. Yapılandırma sayfasında **ÖDEME YÖNTEMİ** menüsünden Garanti BBVA tarafından iletilen bilgileri girin.
-8. Yapılandırmaları girdikten sonra **Kaydet** butonuna basın.
-9. Test siparişi oluşturarak Garanti BBVA ödeme işleminin sorunsuz çalıştığını doğrulayın.
-
-
-
-## AYARLARIN YAPILANDIRILMASI
-
 1. Yönetici panelinden **Woocommerce > Ayarlar** sekmesine gidin.
 2. Açılan sayfada **Ödemeler** butonuna tıklayın
 3. Garanti BBVA modülünün yanındaki **Kurulumu tamamla** veya **Yönet** butonuna tıklayın.
