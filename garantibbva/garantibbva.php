@@ -341,6 +341,7 @@ function gbbva_setup_gateway_class()
 
                 return array(
                     'result' => 'success',
+                    'messages' => 'Payment link created successfully',
                     'iframe_html' => $iframe_html,
                     'redirect_url' => $order_confirmation_url
                 );
