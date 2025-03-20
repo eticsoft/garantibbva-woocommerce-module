@@ -97,7 +97,7 @@ GarantiBBVA implements several security measures to protect the shared data:
 
 You can set installment options and commission rates from the GarantiBBVA management panel.
 
-= Can I change the payment page theme? =
+= Can I change the installment theme? =
 
 Yes, we offer two different theme options: modern and classic. You can select your preferred theme from WooCommerce settings.
 
