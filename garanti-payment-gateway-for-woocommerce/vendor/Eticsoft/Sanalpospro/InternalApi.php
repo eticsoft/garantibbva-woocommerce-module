@@ -343,7 +343,7 @@ class InternalApi
                 if ($discount_amount > 0) {
                     $discountItem = new CartItem(
                         'DSC-' . $coupon->get_code(),
-                        __('Discount', 'garanti-payment-module'),
+                        __('Discount', 'garanti-payment-gateway-for-woocommerce'),
                         'discount',
                         $discount_amount,
                         1
@@ -359,7 +359,7 @@ class InternalApi
         if ($shipping_total > 0) {
             $shippingItem = new CartItem(
                 'SHIP-' . rand(1000, 9999),
-                __('Shipping', 'garanti-payment-module'),
+                __('Shipping', 'garanti-payment-gateway-for-woocommerce'),
                 'shipping',
                 $shipping_total,
                 1
@@ -385,12 +385,12 @@ class InternalApi
             }
             
            
-            $tax_label = __('Tax', 'garanti-payment-module');
+            $tax_label = __('Tax', 'garanti-payment-gateway-for-woocommerce');
             
             
             $taxItem = new CartItem(
                 'TAX-TOTAL-' . rand(1000, 9999),
-                __('Tax', 'garanti-payment-module'),
+                __('Tax', 'garanti-payment-gateway-for-woocommerce'),
                 'tax',
                 $total_tax,
                 1
@@ -516,7 +516,7 @@ class InternalApi
             $res = Payment::validatePayment($process_token);
 
             if ($res['status'] != 'success') {
-                $order->update_status('failed', __('Payment validation failed', 'garanti-payment-module'));
+                $order->update_status('failed', __('Payment validation failed', 'garanti-payment-gateway-for-woocommerce'));
                 return $this->setResponse('error', 'Payment validation failed');
             }
 
@@ -536,7 +536,7 @@ class InternalApi
                 ]);
             } else {
                 $error_message = $result['message'] ?? $process['result_message'] ?? 'Payment failed';
-                $order->update_status('failed', __($error_message, 'garanti-payment-module'));
+                $order->update_status('failed', __($error_message, 'garanti-payment-gateway-for-woocommerce'));
                 return $this->setResponse('error', $error_message);
             }
         } catch (\Exception $e) {

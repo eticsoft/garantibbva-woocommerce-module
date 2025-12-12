@@ -61,22 +61,22 @@ class GBBVA_Admin {
             'currency_convert' => [
                 'default_value' => $settings['currency_convert'] ?? 'no',
                 'options' => [
-                    'yes' => __('Yes', 'garanti-payment-module'),
-                    'no' => __('No', 'garanti-payment-module')
+                    'yes' => __('Yes', 'garanti-payment-gateway-for-woocommerce'),
+                    'no' => __('No', 'garanti-payment-gateway-for-woocommerce')
                 ]
             ],
             'showInstallmentsTabs' => [
                 'default_value' => $settings['showInstallmentsTabs'] ?? 'no',
                 'options' => [
-                    'yes' => __('Yes', 'garanti-payment-module'),
-                    'no' => __('No', 'garanti-payment-module')
+                    'yes' => __('Yes', 'garanti-payment-gateway-for-woocommerce'),
+                    'no' => __('No', 'garanti-payment-gateway-for-woocommerce')
                 ]
             ],
             'paymentPageTheme' => [
                 'default_value' => $settings['paymentPageTheme'] ?? 'modern',
                 'options' => [
-                    'classic' => __('Classic', 'garanti-payment-module'),
-                    'modern' => __('Modern', 'garanti-payment-module')
+                    'classic' => __('Classic', 'garanti-payment-gateway-for-woocommerce'),
+                    'modern' => __('Modern', 'garanti-payment-gateway-for-woocommerce')
                 ]
             ]
         ]) . ';', 'before');
@@ -129,8 +129,8 @@ class GBBVA_Admin {
     public function add_admin_menu() {
         add_submenu_page(
             'woocommerce',
-            __('GarantiBBVA Settings', 'garanti-payment-module'),  
-            __('GarantiBBVA', 'garanti-payment-module'),           
+            __('GarantiBBVA Settings', 'garanti-payment-gateway-for-woocommerce'),  
+            __('GarantiBBVA', 'garanti-payment-gateway-for-woocommerce'),           
             'manage_woocommerce',                      
             'gbbva_admin',                           
             array($this, 'render_admin_page')
