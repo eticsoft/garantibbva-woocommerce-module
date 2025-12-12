@@ -260,10 +260,6 @@ class InternalApi
 
    private function actionCreatePaymentLink(): self
     {
-        
-        
-        
-       
         if (!isset($this->params['order_id']) || empty($this->params['order_id'])) {
             return $this->setResponse('error', 'Order ID is required');
         }

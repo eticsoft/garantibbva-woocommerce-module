@@ -8,7 +8,7 @@
 defined('ABSPATH') || exit;
 ?>
 <div class="wrap gbbva-admin-wrap">
-    <div id="paythor-container"
+    <div id="root"
          data-token="<?php echo esc_attr($token); ?>"
          data-platform="wooCommerce"
          data-website="<?php echo esc_url($site_url); ?>"

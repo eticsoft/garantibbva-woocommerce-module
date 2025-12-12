@@ -87,9 +87,10 @@ class GBBVA_Admin {
         $xfvv = wp_create_nonce('gbbva_internal_api_request');
         $iapi_base_url = 'admin-ajax.php?action=gbbva_internal_api_request';
 
-        wp_add_inline_script('gbbva-admin-settings', 'window.iapi_base_url = "' . esc_js($iapi_base_url) . '";', 'before');
-        wp_add_inline_script('gbbva-admin-settings', 'window.iapi_xfvv = "' . esc_js($xfvv) . '";', 'before');
+        wp_add_inline_script('gbbva-admin-settings', 'window.target_url = "' . esc_js($iapi_base_url) . '";', 'before');
+        wp_add_inline_script('gbbva-admin-settings', 'window.xfvv = "' . esc_js($xfvv) . '";', 'before');
         wp_add_inline_script('gbbva-admin-settings', 'window.store_url = "' . esc_js(get_site_url()) . '";', 'before');
+         wp_add_inline_script('gbbva-admin-settings', 'window.style_url = "' . esc_js(GBBVA_PLUGIN_URL . 'admin/css/index.css') . '";', 'before');
         // Enqueue Paythor dashboard script
         wp_register_script(
             'paythor-dashboard', 
