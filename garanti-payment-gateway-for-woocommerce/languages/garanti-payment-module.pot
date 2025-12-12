@@ -1,6 +1,6 @@
 #, fuzzy
 msgid ""
-msgstr ""
+msgstr """"
 "Project-Id-Version: GarantiBBVA Payment Gateway\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-26 12:00+0000\n"
@@ -13,65 +13,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: garanti-payment-module\n"
 
-#: garantibbva.php:11
-msgid "GarantiBBVA Payment Gateway"
+#: admin/class-admin.php:64 admin/class-admin.php:71
+msgid "Yes"
+msgstr ""
+
+#: admin/class-admin.php:65 admin/class-admin.php:72
+msgid "No"
+msgstr ""
+
+#: admin/class-admin.php:78
+msgid "Classic"
+msgstr ""
+
+#: admin/class-admin.php:79
+msgid "Modern"
+msgstr ""
+
+#: admin/class-admin.php:132
+msgid "GarantiBBVA Settings"
+msgstr ""
+
+#: admin/class-admin.php:133
+msgid "GarantiBBVA"
 msgstr ""
 
 #: garantibbva.php:110
 msgid "Warning"
-msgstr ""
-
-#: garantibbva.php:123
-msgid "GarantiBBVA Payment Gateway Warning"
-msgstr ""
-
-#: garantibbva.php:123
-msgid "You need to switch to Classic Checkout view!"
-msgstr ""
-
-#: garantibbva.php:124
-msgid "How to do it?"
-msgstr ""
-
-#: garantibbva.php:139
-msgid "GarantiBBVA Payment Gateway Compatibility Notice"
-msgstr ""
-
-#: garantibbva.php:140
-msgid ""
-"After the WooCommerce infrastructure update, the block-based payment option "
-"view is not currently available in our plugin. This issue is in our planning "
-"and will be completed by our team as soon as possible."
-msgstr ""
-
-#: garantibbva.php:141
-msgid "The classic payment view can be activated with the following steps:"
-msgstr ""
-
-#: garantibbva.php:143
-msgid "Back up your site just in case."
-msgstr ""
-
-#: garantibbva.php:144
-msgid "Go to WordPress admin panel > Pages > Checkout Page."
-msgstr ""
-
-#: garantibbva.php:145
-msgid ""
-"After clicking on Payment options, click on the Block button in the right "
-"menu."
-msgstr ""
-
-#: garantibbva.php:146
-msgid ""
-"Click on the Switch to classic checkout button in this area and save the "
-"changes with the Save button."
-msgstr ""
-
-#: garantibbva.php:148
-msgid ""
-"After these steps, the Classic payment view will be active and you can use "
-"our plugin."
 msgstr ""
 
 #: garantibbva.php:166
@@ -99,7 +66,7 @@ msgid ""
 msgstr ""
 
 #: garantibbva.php:254
-msgid "GarantiBBVA Payment Gateway for WooCommerce "
+msgid "GarantiBBVA Payment Gateway for WooCommerce"
 msgstr ""
 
 #: garantibbva.php:260
@@ -122,156 +89,101 @@ msgstr ""
 msgid "Click to Access GarantiBBVA Panel"
 msgstr ""
 
-#: garantibbva.php:363
+#: garantibbva.php:365
 msgid "Error Code"
 msgstr ""
-
-#: garantibbva.php:418
+#: garantibbva.php:417
 msgid "Security check failed. Please try again."
 msgstr ""
 
-#: garantibbva.php:424
+#: garantibbva.php:423
 msgid "Invalid order."
 msgstr ""
 
-#: garantibbva.php:429
+#: garantibbva.php:428
 msgid "You do not have permission to view this order."
 msgstr ""
 
-#: garantibbva.php:437
+#: garantibbva.php:436
 msgid "Invalid payment ID."
 msgstr ""
 
-#: garantibbva.php:453
+#: garantibbva.php:452
 msgid "Payment failed"
 msgstr ""
 
-#: garantibbva.php:459
+#: garantibbva.php:458
 msgid "Processing GarantiBBVA payment"
 msgstr ""
 
-#: garantibbva.php:463
+#: garantibbva.php:462
 #, php-format
 msgid "Payment completed successfully via %s."
 msgstr ""
 
-#: garantibbva.php:472
+#: garantibbva.php:471
 msgid "Commission Fee"
 msgstr ""
 
-#: garantibbva.php:498
+#: garantibbva.php:517
 msgid "GarantiBBVA Payment Warning"
 msgstr ""
 
-#: garantibbva.php:499
+#: garantibbva.php:518
 msgid "Payment was processed through GarantiBBVA"
 msgstr ""
 
-#: garantibbva.php:500
+#: garantibbva.php:519
 msgid ""
 "Please check the payment status and verify with your bank/payment "
 "institution."
 msgstr ""
 
-#: garantibbva.php:569
+#: garantibbva.php:603
 msgid "Installment Options"
 msgstr ""
 
-#: admin/class-admin.php:64 admin/class-admin.php:71
-msgid "Yes"
+#: templates/installment_theme/classic.php:42
+#: templates/installment_theme/modern.php:62
+msgid "No installment options are available for this product."
 msgstr ""
 
-#: admin/class-admin.php:65 admin/class-admin.php:72
-msgid "No"
-msgstr ""
-
-#: admin/class-admin.php:78
-msgid "Classic"
-msgstr ""
-
-#: admin/class-admin.php:79
-msgid "Modern"
-msgstr ""
-
-#: admin/class-admin.php:131
-msgid "GarantiBBVA Settings"
-msgstr ""
-
-#: admin/class-admin.php:132
-msgid "GarantiBBVA"
-msgstr ""
-
-#: templates/installment_theme/classic.php:52
-#: templates/installment_theme/modern.php:93
+#: templates/installment_theme/classic.php:72
 msgid "Installment"
 msgstr ""
 
-#: templates/installment_theme/classic.php:53
-#: templates/installment_theme/modern.php:94
+#: templates/installment_theme/classic.php:73
 msgid "Monthly Payment"
 msgstr ""
 
-#: templates/installment_theme/classic.php:54
-#: templates/installment_theme/modern.php:95
+#: templates/installment_theme/classic.php:74
 msgid "Total"
 msgstr ""
 
-#: templates/installment_theme/classic.php:82
-#: templates/installment_theme/modern.php:123
+#: templates/installment_theme/classic.php:103
+#: templates/installment_theme/modern.php:144
 msgid "Cash"
 msgstr ""
 
-#: templates/installment_theme/classic.php:85
-#: templates/installment_theme/modern.php:126
+#: templates/installment_theme/classic.php:106
+#: templates/installment_theme/modern.php:147
 #, php-format
 msgid "%d. Installment"
 msgstr ""
 
-#: templates/installment_theme/classic.php:100
-#: templates/installment_theme/modern.php:142
-msgid ""
-"* Installment amounts are estimated and may vary according to your bank's "
-"campaigns and interest rates."
-msgstr ""
-
-#: templates/checkout/payment-iframe.php:20
-msgid "×"
-msgstr ""
-
-#: templates/checkout/payment-iframe.php:27
-msgid "Loading payment page..."
-msgstr ""
-
-#: vendor/Eticsoft/Sanalpospro/InternalApi.php:344
+#: vendor/Eticsoft/Sanalpospro/InternalApi.php:346
 msgid "Discount"
 msgstr ""
 
-#: vendor/Eticsoft/Sanalpospro/InternalApi.php:360
+#: vendor/Eticsoft/Sanalpospro/InternalApi.php:362
 msgid "Shipping"
 msgstr ""
 
-#: vendor/Eticsoft/Sanalpospro/InternalApi.php:386
-#: vendor/Eticsoft/Sanalpospro/InternalApi.php:391
+#: vendor/Eticsoft/Sanalpospro/InternalApi.php:388
+#: vendor/Eticsoft/Sanalpospro/InternalApi.php:393
 msgid "Tax"
 msgstr ""
 
-#: vendor/Eticsoft/Sanalpospro/InternalApi.php:472
+#: vendor/Eticsoft/Sanalpospro/InternalApi.php:519
 msgid "Payment validation failed"
-msgstr ""
-
-#: vendor/Eticsoft/Sanalpospro/InternalApi.php:452
-msgid "Payment failed"
-msgstr ""
-
-#: vendor/Eticsoft/Sanalpospro/InternalApi.php:458
-msgid "Processing GarantiBBVA payment"
-msgstr ""
-
-#: vendor/Eticsoft/Sanalpospro/InternalApi.php:462
-#, php-format
-msgid "Payment completed successfully via %s."
-msgstr ""
-
-#: vendor/Eticsoft/Sanalpospro/InternalApi.php:471
-msgid "Commission Fee"
 msgstr ""

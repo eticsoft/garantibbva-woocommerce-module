@@ -40,15 +40,35 @@ $all_card_families = [
     'paraf', 'saglamcard', 'advantage', 'combo', 'miles-smiles'
 ];
 
+// Tüm kart aileleri için taksit seçeneklerini kontrol et
+$any_installment_available = false;
+foreach($all_card_families as $card_key) {
+    if(!empty($installments[$card_key])) {
+        $card_installments = array_filter($installments[$card_key], function($installment) {
+            return $installment['gateway'] !== 'off';
+        });
+        if(!empty($card_installments)) {
+            $any_installment_available = true;
+            break;
+        }
+    }
+}
 ?>
 
 <div class="gbbva-installment-container">
+    <?php if(!$any_installment_available) : ?>
+        <div class="gbbva-no-installment" style="padding: 20px; text-align: center;">
+            <p style="margin: 0; font-size: 14px; color: #666;">
+                <?php esc_html_e('No installment options are available for this product.', 'garanti-payment-module'); ?>
+            </p>
+        </div>
+    <?php else : ?>
     <div class="gbbva-installment-tabs">
         <div class="gbbva-tab-header">
-            <?php foreach($all_card_families as $card_key) : 
+            <?php foreach($all_card_families as $card_key) :
                 $has_any_installment = false;
-                
-                
+
+
                 if(!empty($installments[$card_key])) {
                     $card_installments = array_filter($installments[$card_key], function($installment) {
                         return $installment['gateway'] !== 'off';
@@ -58,8 +78,8 @@ $all_card_families = [
                         $has_any_installment = true;
                     }
                 }
-                
-               
+
+
                 if (!$has_any_installment) continue;
             ?>
                 <div class="gbbva-tab-item" data-tab="<?php echo esc_attr($card_key); ?>">
@@ -106,10 +126,11 @@ $all_card_families = [
                                     if($installment['months'] == $i) {
                                         $installment_exists = true;
                                         if($i == 1 && $installment['gateway_fee_percent'] == 0) {
-                                            $total = $price + (($price * $installment['gateway_fee_percent'])/100);
+                                            $total = $price;
                                             $monthly = $total;
                                         } else {
-                                            $total = $price * (1 + $installment['gateway_fee_percent']/100);
+                                            // Yeni formül: (Anapara × 100) / (100 - Komisyon Oranı)
+                                            $total = ($price * 100) / (100 - $installment['gateway_fee_percent']);
                                             $monthly = $total/$i;
                                         }
                                         $monthly_payment = wp_kses_post(wc_price($monthly));
@@ -137,9 +158,10 @@ $all_card_families = [
             <?php endforeach; ?>
         </div>
     </div>
-    
+
     <div class="gbbva-installment-note">
         <p><?php esc_html_e('* Installment amounts are estimated and may vary according to your bank\'s campaigns and interest rates.', 'garanti-payment-module'); ?></p>
     </div>
+    <?php endif; ?>
 </div>
 
