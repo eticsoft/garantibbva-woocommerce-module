@@ -32,8 +32,9 @@ global $product;
 if (!$product) return;
 
 $gbbva_modern_price = $product->get_price();
-$gbbva_modern_installments = json_decode(empty($gbbva_modern_installments) ? '[]' : $gbbva_modern_installments, true);
-//print_r($gbbva_modern_installments);
+$gbbva_modern_installments = json_decode(empty($installments) ? '[]' : $installments, true);
+/* print_r($installments);
+die(); */
 
 $gbbva_modern_all_card_families = [
     'world', 'axess', 'bonus', 'cardfinans', 'maximum',

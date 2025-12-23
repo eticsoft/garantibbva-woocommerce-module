@@ -14,7 +14,7 @@ global $product;
 if (!$product) return;
 
 $gbbva_classic_price = $product->get_price();
-$gbbva_classic_installments = json_decode(empty($gbbva_classic_installments) ? '[]' : $gbbva_classic_installments, true);
+$gbbva_classic_installments = json_decode(empty($installments) ? '[]' : $installments, true);
 $gbbva_classic_all_card_families = [
     'world', 'axess', 'bonus', 'cardfinans', 'maximum',
     'paraf', 'saglamcard', 'advantage', 'combo', 'miles-smiles'
