@@ -14,20 +14,20 @@ use Eticsoft\Sanalpospro\EticConfig;
  * Plugin Name: GarantiBBVA Payment Gateway
  * Plugin URI: https://garantibbva.com
  * Description: GarantiBBVA payment gateway for WooCommerce
- * Version: 2.0.1
+ * Version: 2.1.0
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * Author: EticSoft R&D Lab.
  * Author URI: https://eticsoft.com
  * License: GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: garanti-payment-module
+ * Text Domain: garanti-payment-gateway-for-woocommerce
  * Domain Path: /languages
  */
 
 // Define constants
 if (!defined('GBBVA_VERSION')) {
-    define('GBBVA_VERSION', '2.0.1');
+    define('GBBVA_VERSION', '2.1.0');
 }
 if (!defined('GBBVA_PLUGIN_URL')) {
     define('GBBVA_PLUGIN_URL', plugin_dir_url(__FILE__));
@@ -107,7 +107,7 @@ function gbbva_block_checkout_admin_notice()
                // Using proper WordPress way to display an image
                $image_attributes = [
                    'src' => esc_url(WC()->plugin_url() . '/assets/images/icons/info.svg'),
-                   'alt' => esc_attr__('Warning', 'garanti-payment-module'),
+                   'alt' => esc_attr__('Warning', 'garanti-payment-gateway-for-woocommerce'),
                    'width' => 48,
                    'height' => 48,
                ];
@@ -120,8 +120,8 @@ function gbbva_block_checkout_admin_notice()
                ?>
            </div>
            <div>
-               <p style="font-size: 16px; margin: 0; line-height: 1.5;"><strong><?php esc_html_e('GarantiBBVA Payment Gateway Warning', 'garanti-payment-module'); ?></strong>: <?php esc_html_e('You need to switch to Classic Checkout view!', 'garanti-payment-module'); ?> 
-                   <button id="gbbva-show-instructions" class="button button-primary" style="margin-left: 15px; font-size: 14px; padding: 5px 15px;"><?php esc_html_e('How to do it?', 'garanti-payment-module'); ?></button>
+               <p style="font-size: 16px; margin: 0; line-height: 1.5;"><strong><?php esc_html_e('GarantiBBVA Payment Gateway Warning', 'garanti-payment-gateway-for-woocommerce'); ?></strong>: <?php esc_html_e('You need to switch to Classic Checkout view!', 'garanti-payment-gateway-for-woocommerce'); ?> 
+                   <button id="gbbva-show-instructions" class="button button-primary" style="margin-left: 15px; font-size: 14px; padding: 5px 15px;"><?php esc_html_e('How to do it?', 'garanti-payment-gateway-for-woocommerce'); ?></button>
                </p>
            </div>
        </div>
@@ -136,16 +136,16 @@ function gbbva_popup_html() {
     <div class="gbbva-popup-overlay" id="gbbva-popup">
         <div class="gbbva-popup-content">
             <a href="#" class="gbbva-popup-close">&times;</a>
-            <div class="gbbva-popup-title"><?php esc_html_e('GarantiBBVA Payment Gateway Compatibility Notice', 'garanti-payment-module'); ?></div>
-            <p style="font-size: 15px; line-height: 1.6;"><?php esc_html_e('After the WooCommerce infrastructure update, the block-based payment option view is not currently available in our plugin. This issue is in our planning and will be completed by our team as soon as possible.', 'garanti-payment-module'); ?></p>
-            <p style="font-size: 15px; line-height: 1.6;"><strong><?php esc_html_e('The classic payment view can be activated with the following steps:', 'garanti-payment-module'); ?></strong></p>
+            <div class="gbbva-popup-title"><?php esc_html_e('GarantiBBVA Payment Gateway Compatibility Notice', 'garanti-payment-gateway-for-woocommerce'); ?></div>
+            <p style="font-size: 15px; line-height: 1.6;"><?php esc_html_e('After the WooCommerce infrastructure update, the block-based payment option view is not currently available in our plugin. This issue is in our planning and will be completed by our team as soon as possible.', 'garanti-payment-gateway-for-woocommerce'); ?></p>
+            <p style="font-size: 15px; line-height: 1.6;"><strong><?php esc_html_e('The classic payment view can be activated with the following steps:', 'garanti-payment-gateway-for-woocommerce'); ?></strong></p>
             <ol style="font-size: 15px; line-height: 1.8;">
-                <li><?php esc_html_e('Back up your site just in case.', 'garanti-payment-module'); ?></li>
-                <li><?php esc_html_e('Go to WordPress admin panel > Pages > Checkout Page.', 'garanti-payment-module'); ?></li>
-                <li><?php esc_html_e('After clicking on Payment options, click on the Block button in the right menu.', 'garanti-payment-module'); ?></li>
-                <li><?php esc_html_e('Click on the Switch to classic checkout button in this area and save the changes with the Save button.', 'garanti-payment-module'); ?></li>
+                <li><?php esc_html_e('Back up your site just in case.', 'garanti-payment-gateway-for-woocommerce'); ?></li>
+                <li><?php esc_html_e('Go to WordPress admin panel > Pages > Checkout Page.', 'garanti-payment-gateway-for-woocommerce'); ?></li>
+                <li><?php esc_html_e('After clicking on Payment options, click on the Block button in the right menu.', 'garanti-payment-gateway-for-woocommerce'); ?></li>
+                <li><?php esc_html_e('Click on the Switch to classic checkout button in this area and save the changes with the Save button.', 'garanti-payment-gateway-for-woocommerce'); ?></li>
             </ol>
-            <p style="font-size: 15px; line-height: 1.6;"><?php esc_html_e('After these steps, the Classic payment view will be active and you can use our plugin.', 'garanti-payment-module'); ?></p>
+            <p style="font-size: 15px; line-height: 1.6;"><?php esc_html_e('After these steps, the Classic payment view will be active and you can use our plugin.', 'garanti-payment-gateway-for-woocommerce'); ?></p>
         </div>
     </div>
     <?php
@@ -163,11 +163,11 @@ function gbbva_activate_plugin()
         wp_die(
             esc_html(sprintf(
                 /* translators: 1: Required PHP version, 2: Current PHP version */
-                __('GarantiBBVA Payment Gateway requires PHP version %1$s or higher. You are running version %2$s. Please upgrade PHP and try again.', 'garanti-payment-module'),
+                __('GarantiBBVA Payment Gateway requires PHP version %1$s or higher. You are running version %2$s. Please upgrade PHP and try again.', 'garanti-payment-gateway-for-woocommerce'),
                 '7.4',
                 PHP_VERSION
             )),
-            esc_html(__('Plugin Activation Error', 'garanti-payment-module')),
+            esc_html(__('Plugin Activation Error', 'garanti-payment-gateway-for-woocommerce')),
             array('back_link' => true)
         );
     }
@@ -178,11 +178,11 @@ function gbbva_activate_plugin()
         wp_die(
             esc_html(sprintf(
                 /* translators: 1: Required WordPress version, 2: Current WordPress version */
-                __('GarantiBBVA Payment Gateway requires WordPress version %1$s or higher. You are running version %2$s. Please upgrade WordPress and try again.', 'garanti-payment-module'),
+                __('GarantiBBVA Payment Gateway requires WordPress version %1$s or higher. You are running version %2$s. Please upgrade WordPress and try again.', 'garanti-payment-gateway-for-woocommerce'),
                 '5.8',
                 esc_html($GLOBALS['wp_version'])
             )),
-            esc_html(__('Plugin Activation Error', 'garanti-payment-module')),
+            esc_html(__('Plugin Activation Error', 'garanti-payment-gateway-for-woocommerce')),
             array('back_link' => true)
         );
     }
@@ -191,8 +191,8 @@ function gbbva_activate_plugin()
     if (!class_exists('WooCommerce')) {
         deactivate_plugins(plugin_basename(__FILE__));
         wp_die(
-            esc_html(__('GarantiBBVA Payment Gateway requires WooCommerce to be installed and activated.', 'garanti-payment-module')),
-            esc_html(__('Plugin Activation Error', 'garanti-payment-module')),
+            esc_html(__('GarantiBBVA Payment Gateway requires WooCommerce to be installed and activated.', 'garanti-payment-gateway-for-woocommerce')),
+            esc_html(__('Plugin Activation Error', 'garanti-payment-gateway-for-woocommerce')),
             array('back_link' => true)
         );
     }
@@ -251,14 +251,14 @@ function gbbva_setup_gateway_class()
             $this->icon = GBBVA_PLUGIN_URL . 'assets/images/garantibbva-logo.png';
             $this->has_fields = false;
             $this->method_title = 'GarantiBBVA';
-            $this->method_description = __('GarantiBBVA Payment Gateway for WooCommerce', 'garanti-payment-module');
+            $this->method_description = __('GarantiBBVA Payment Gateway for WooCommerce', 'garanti-payment-gateway-for-woocommerce');
             $this->supports = array('products');
 
             $this->init_form_fields();
             $this->init_settings();
 
-            $this->title = __('Pay via Card (GarantiBBVA)', 'garanti-payment-module');
-            $this->description = __('Payment by your credit/debit card.', 'garanti-payment-module');
+            $this->title = __('Pay via Card (GarantiBBVA)', 'garanti-payment-gateway-for-woocommerce');
+            $this->description = __('Payment by your credit/debit card.', 'garanti-payment-gateway-for-woocommerce');
 
             // Actions and filters
             add_action('woocommerce_update_options_payment_gateways_' . $this->id, array($this, 'process_admin_options'));
@@ -281,11 +281,11 @@ function gbbva_setup_gateway_class()
         {
             $this->form_fields = array(
                 'enabled' => array(
-                    'title' => __('Enable/Disable', 'garanti-payment-module'),
+                    'title' => __('Enable/Disable', 'garanti-payment-gateway-for-woocommerce'),
                     'type' => 'checkbox',
-                    'label' => __('Enable/Disable GarantiBBVA payment gateway', 'garanti-payment-module'),
+                    'label' => __('Enable/Disable GarantiBBVA payment gateway', 'garanti-payment-gateway-for-woocommerce'),
                     'default' => 'yes',
-                    'description' => __('Enable/Disable GarantiBBVA payment gateway', 'garanti-payment-module'),
+                    'description' => __('Enable/Disable GarantiBBVA payment gateway', 'garanti-payment-gateway-for-woocommerce'),
                     'desc_tip' => true,
                 ),
                 'panel_button' => array(
@@ -323,7 +323,7 @@ function gbbva_setup_gateway_class()
             return '<tr><td colspan="2" style="padding-left: 0;">
                 <a href="' . esc_url(admin_url('admin.php?page=gbbva_admin')) . '" 
                    class="button button-primary">
-                    ' . esc_html__('Click to Access GarantiBBVA Panel', 'garanti-payment-module') . '
+                    ' . esc_html__('Click to Access GarantiBBVA Panel', 'garanti-payment-gateway-for-woocommerce') . '
                 </a>
             </td></tr>';
         }
@@ -362,7 +362,7 @@ function gbbva_setup_gateway_class()
                 if ($res['status'] !== 'success') {
                     throw new Exception(sprintf(
                         '<div>%s: %s</div> <div>%s</div>',
-                        esc_html__('Error Code', 'garanti-payment-module'),
+                        esc_html__('Error Code', 'garanti-payment-gateway-for-woocommerce'),
                         esc_html($res['status']),
                         esc_html($res['message'])
                     ));
@@ -414,18 +414,18 @@ function gbbva_setup_gateway_class()
          
             // Verify nonce to prevent CSRF attacks
             if (!isset($_GET['_wpnonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_GET['_wpnonce'])), 'gbbva_payment_confirmation')) {
-                wp_die(esc_html__('Security check failed. Please try again.', 'garanti-payment-module'));
+                wp_die(esc_html__('Security check failed. Please try again.', 'garanti-payment-gateway-for-woocommerce'));
             }
 
             // Verify user has permission to view this order
             $order = wc_get_order(absint($order_id));
             if (!$order) {
-                wp_die(esc_html__('Invalid order.', 'garanti-payment-module'));
+                wp_die(esc_html__('Invalid order.', 'garanti-payment-gateway-for-woocommerce'));
             }
 
             // Check if user has permission to view this order
             if (!current_user_can('manage_woocommerce') && $order->get_customer_id() !== get_current_user_id()) {
-                wp_die(esc_html__('You do not have permission to view this order.', 'garanti-payment-module'));
+                wp_die(esc_html__('You do not have permission to view this order.', 'garanti-payment-gateway-for-woocommerce'));
             }
 
             // Sanitize and validate input parameters
@@ -433,7 +433,7 @@ function gbbva_setup_gateway_class()
             $id = empty($id) ? $order_id : $id;
 
             if (!$id) {
-                wp_die(esc_html__('Invalid payment ID.', 'garanti-payment-module'));
+                wp_die(esc_html__('Invalid payment ID.', 'garanti-payment-gateway-for-woocommerce'));
             }
 
             try {
@@ -449,17 +449,17 @@ function gbbva_setup_gateway_class()
 
 
                 if ($response['status'] !== 'success') {
-                    $order->update_status('failed', __('Payment failed', 'garanti-payment-module'));
+                    $order->update_status('failed', __('Payment failed', 'garanti-payment-gateway-for-woocommerce'));
                     wc_add_notice($response['message'], 'error');
                     wp_redirect(wc_get_checkout_url());
                     exit;
                 }
 
-                $order->update_status(EticConfig::get('GARANTIBBVA_ORDER_STATUS'), __('Processing GarantiBBVA payment', 'garanti-payment-module'));
+                $order->update_status(EticConfig::get('GARANTIBBVA_ORDER_STATUS'), __('Processing GarantiBBVA payment', 'garanti-payment-gateway-for-woocommerce'));
                 $order->add_order_note(
                     sprintf(
                         /* translators: %s: Payment gateway name */
-                        __('Payment completed successfully via %s.', 'garanti-payment-module'),
+                        __('Payment completed successfully via %s.', 'garanti-payment-gateway-for-woocommerce'),
                         $response['data']['gateway']  ?? 'garantibbva'
                     )
                 );
@@ -468,7 +468,7 @@ function gbbva_setup_gateway_class()
                 $transaction_amount = $amount;
                 $tax_amount = $transaction_amount - $original_total;
                 $fee = new WC_Order_Item_Fee();
-                $fee->set_name(__('Commission Fee', 'garanti-payment-module'));
+                $fee->set_name(__('Commission Fee', 'garanti-payment-gateway-for-woocommerce'));
                 $fee->set_amount($tax_amount);
                 $fee->set_total($tax_amount);
                 $fee->set_tax_class('');
@@ -514,9 +514,9 @@ function gbbva_setup_gateway_class()
                 
                 if (in_array($order_status, $completed_statuses)) {
                     echo '<div class="notice notice-warning gbbva-warning" style="padding: 10px; margin: 10px 0;">
-                        <h4>' . esc_html__('GarantiBBVA Payment Warning', 'garanti-payment-module') . '</h4>
-                        <p>' . esc_html__('Payment was processed through GarantiBBVA', 'garanti-payment-module') . '</p>
-                        <p>' . esc_html__('Please check the payment status and verify with your bank/payment institution.', 'garanti-payment-module') . '</p>
+                        <h4>' . esc_html__('GarantiBBVA Payment Warning', 'garanti-payment-gateway-for-woocommerce') . '</h4>
+                        <p>' . esc_html__('Payment was processed through GarantiBBVA', 'garanti-payment-gateway-for-woocommerce') . '</p>
+                        <p>' . esc_html__('Please check the payment status and verify with your bank/payment institution.', 'garanti-payment-gateway-for-woocommerce') . '</p>
                     </div>';
                     
                     // Mark this order as having shown the warning
@@ -529,9 +529,9 @@ function gbbva_setup_gateway_class()
         {
             if ($order->get_payment_method() === 'garantibbva') {
                 echo '<div class="notice notice-warning gbbva-warning" style="padding: 10px; margin: 10px 0;">
-                    <h4>' . esc_html__('GarantiBBVA Payment Warning', 'garanti-payment-module') . '</h4>
-                    <p>' . esc_html__('Payment was processed through GarantiBBVA', 'garanti-payment-module') . '</p>
-                    <p>' . esc_html__('Please check the payment status and verify with your bank/payment institution.', 'garanti-payment-module') . '</p>
+                    <h4>' . esc_html__('GarantiBBVA Payment Warning', 'garanti-payment-gateway-for-woocommerce') . '</h4>
+                    <p>' . esc_html__('Payment was processed through GarantiBBVA', 'garanti-payment-gateway-for-woocommerce') . '</p>
+                    <p>' . esc_html__('Please check the payment status and verify with your bank/payment institution.', 'garanti-payment-gateway-for-woocommerce') . '</p>
                 </div>';
             }
         } */
@@ -600,7 +600,7 @@ function gbbva_add_installment_tab($tabs)
     $showInstallmentsTabs = EticConfig::get('GARANTIBBVA_SHOWINSTALLMENTSTABS');
     if ($showInstallmentsTabs === 'yes') {
         $tabs['installment_tab'] = array(
-            'title'    => __('Installment Options', 'garanti-payment-module'),
+            'title'    => __('Installment Options', 'garanti-payment-gateway-for-woocommerce'),
             'priority' => 50,
             'callback' => 'gbbva_installment_tab_content'
         );

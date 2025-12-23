@@ -8,7 +8,7 @@ if (!defined('ABSPATH')) exit;
  * This template can be overridden by copying it to yourtheme/woocommerce/garantibbva/checkout/payment-form.php.
  *
  * @package GarantiBBVA
- * @version 2.0.1
+ * @version 2.1.0
  */
 ?>
 
